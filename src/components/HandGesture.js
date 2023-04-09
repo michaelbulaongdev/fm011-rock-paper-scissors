@@ -1,11 +1,12 @@
 import Paper from '../images/icon-paper.svg';
 import Scissors from '../images/icon-scissors.svg';
 import Rock from '../images/icon-rock.svg';
+import LoadingIcon from '../images/Gear-0.5s-78px.svg';
 
-export default function HandGesture(props) {
+export default function HandGesture({choice}) {
 	let gesture;
 	let gest;
-	switch (props.choice) {
+	switch (choice) {
 		case 'paper':
 			gesture = Paper;
 			gest = 'paper';
@@ -19,8 +20,8 @@ export default function HandGesture(props) {
 			gest = 'rock';
 			break;
 		default:
-			gesture = null;
-			gest = '';
+			gesture = LoadingIcon;
+			gest = 'loading';
 			break;
 	}
 	return (

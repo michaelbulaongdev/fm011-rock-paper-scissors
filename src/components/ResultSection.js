@@ -1,29 +1,32 @@
-import {useState} from 'react';
 import HandGesture from './HandGesture';
 
-export default function ResultSection(props) {
-	const [loading, setLoading] = useState(true);
-
-	const rng = Math.floor(Math.random() * 3);
-
-	let winner = 'YOU WON';
-
+export default function ResultSection({
+	loading,
+	humanPick,
+	computerPick,
+	message,
+	playAgain,
+}) {
 	return (
 		<section className='result-section-container'>
 			<div className='human-vs-computer'>
 				<div className='human-picked'>
-					<HandGesture choice={props.choice} />
+					<HandGesture choice={humanPick} />
 					<p className='picked-text'>YOU PICKED</p>
 				</div>
 				<div className='computer-picked'>
-					<HandGesture choice={'rock'} />
+					<HandGesture choice={computerPick} />
 					<p className='picked-text'>THE HOUSE PICKED</p>
 				</div>
 			</div>
-			<div className='winner-section'>
-				<h1 className='winner-text'>{winner}</h1>
-				<button className='play-button'>PLAY AGAIN</button>
-			</div>
+			{!loading && (
+				<div className='winner-section'>
+					<h1 className='winner-text'>{message}</h1>
+					<button className='play-button' onClick={() => playAgain()}>
+						PLAY AGAIN
+					</button>
+				</div>
+			)}
 		</section>
 	);
 }

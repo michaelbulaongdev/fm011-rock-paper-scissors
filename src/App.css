@@ -167,6 +167,12 @@
 	box-shadow: 0px 5px 1px hsl(349, 71%, 40%), inset 0 5px hsl(217, 16%, 85%);
 }
 
+.loading-color {
+	border-color: white;
+	background-color: white;
+	box-shadow: 0 0 10px white;
+}
+
 .picked-text {
 	margin-top: 1.5rem;
 }
