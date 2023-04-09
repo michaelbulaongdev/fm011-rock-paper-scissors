@@ -54,6 +54,7 @@ function App() {
 
 	useEffect(() => {
 		evaluate();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [computerPick]);
 
 	return (
