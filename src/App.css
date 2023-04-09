@@ -1,3 +1,43 @@
+:root {
+	--darkText: hsl(229, 25%, 31%);
+	--scoreText: hsl(229, 64%, 46%);
+	--headerOutline: hsl(217, 16%, 45%);
+}
+
 .App {
+	background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.rules-button {
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	color: white;
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 5px;
+	font-size: 0.8rem;
+	padding: 0.3rem 2rem;
+	transition: ease-in-out 0.3s;
+}
+
+.rules-button:hover {
+	background-color: white;
+	color: var(--darkText);
+}
+
+.rules {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 24px;
+	color: var(--darkText);
 	text-align: center;
 }
