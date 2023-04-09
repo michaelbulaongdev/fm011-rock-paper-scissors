@@ -1,6 +1,6 @@
 import Logo from '../images/logo.svg';
 
-export default function ScoreSection(props) {
+export default function ScoreSection({score}) {
 	return (
 		<section className='score-section-container'>
 			<div className='game-title-container'>
@@ -10,7 +10,7 @@ export default function ScoreSection(props) {
 			<div className='score-box'>
 				<p className='score-label'>SCORE</p>
 				<div className='score-text-container'>
-					<h1 className='score-text'>{props.score}</h1>
+					<h1 className='score-text'>{score}</h1>
 				</div>
 			</div>
 		</section>

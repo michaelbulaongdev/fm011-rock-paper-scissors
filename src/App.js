@@ -1,14 +1,14 @@
 import './App.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import ScoreSection from './components/ScoreSection';
 import GameSection from './components/GameSection';
 import ResultSection from './components/ResultSection';
 import RulesModal from './components/RulesModal';
 
-export default function App() {
+function App() {
 	const [hasPicked, setHasPicked] = useState(false);
 	const [loading, setLoading] = useState(true);
-	const [choice, setChoice] = useState('');
+	const [humanPick, setHumanPick] = useState('');
 	const [computerPick, setComputerPick] = useState('');
 	const [message, setMessage] = useState('DRAW');
 	const [score, setScore] = useState(0);
@@ -19,9 +19,27 @@ export default function App() {
 		return gestList[rng];
 	};
 
+	const evaluate = () => {
+		if (humanPick === computerPick) {
+			setMessage('DRAW');
+		} else if (humanPick === 'scissors' && computerPick === 'paper') {
+			setMessage('YOU WIN');
+			setScore(score + 1);
+		} else if (humanPick === 'paper' && computerPick === 'rock') {
+			setMessage('YOU WIN');
+			setScore(score + 1);
+		} else if (humanPick === 'rock' && computerPick === 'scissors') {
+			setMessage('YOU WIN');
+			setScore(score + 1);
+		} else {
+			setMessage('YOU LOSE');
+			setScore(score - 1);
+		}
+	};
+
 	const handleClick = (e) => {
 		setHasPicked(true);
-		setChoice(e);
+		setHumanPick(e);
 		setTimeout(() => {
 			setComputerPick(housePick());
 			setLoading(false);
@@ -31,10 +49,16 @@ export default function App() {
 	const playAgain = () => {
 		setHasPicked(false);
 		setLoading(true);
-		setChoice('');
+		setHumanPick('');
 		setComputerPick('');
 		setMessage('DRAW');
 	};
+
+	useEffect(() => {
+		console.log(`human picked ${humanPick}`);
+		console.log(`computer picked ${computerPick}`);
+		evaluate();
+	}, [computerPick]);
 
 	return (
 		<main className='App'>
@@ -42,7 +66,7 @@ export default function App() {
 			{hasPicked ? (
 				<ResultSection
 					loading={loading}
-					humanPick={choice}
+					humanPick={humanPick}
 					computerPick={computerPick}
 					message={message}
 					playAgain={playAgain}
@@ -54,3 +78,5 @@ export default function App() {
 		</main>
 	);
 }
+
+export default App;
