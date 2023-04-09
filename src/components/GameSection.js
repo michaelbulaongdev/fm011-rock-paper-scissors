@@ -3,7 +3,9 @@ import Paper from '../images/icon-paper.svg';
 import Scissors from '../images/icon-scissors.svg';
 import Rock from '../images/icon-rock.svg';
 
-export default function GameSection() {
+export default function GameSection(props) {
+	const handleClick = props.handleClick;
+
 	return (
 		<section className='game-section-container'>
 			<div className='triangle-container'>
@@ -13,19 +15,25 @@ export default function GameSection() {
 					alt='inverted triangle'
 				/>
 				<div className='hand-all-container'>
-					<div className='hand-container paper'>
+					<button
+						className='hand-container paper'
+						onClick={() => handleClick('paper')}>
 						<img className='hand-image' src={Paper} alt='paper hand gesture' />
-					</div>
-					<div className='hand-container rock'>
+					</button>
+					<button
+						className='hand-container rock'
+						onClick={() => handleClick('rock')}>
 						<img className='hand-image' src={Rock} alt='rock hand gesture' />
-					</div>
-					<div className='hand-container scissors'>
+					</button>
+					<button
+						className='hand-container scissors'
+						onClick={() => handleClick('scissors')}>
 						<img
 							className='hand-image'
 							src={Scissors}
 							alt='scissors hand gesture'
 						/>
-					</div>
+					</button>
 				</div>
 			</div>
 		</section>
