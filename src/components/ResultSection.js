@@ -3,7 +3,8 @@ import HandGesture from './HandGesture';
 
 export default function ResultSection(props) {
 	const [loading, setLoading] = useState(true);
-	const rng = Math.floor(Math.random() * 3) + 1;
+
+	const rng = Math.floor(Math.random() * 3);
 
 	let winner = 'YOU WON';
 
