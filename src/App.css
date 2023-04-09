@@ -31,24 +31,38 @@
 	color: var(--darkText);
 }
 
-.rules {
+.rules-container {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 400px;
 	background-color: white;
 	border-radius: 5px;
 	box-shadow: 24px;
 	color: var(--darkText);
-	text-align: center;
+	padding: 0.1rem 0.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.rules-header {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 1rem;
+	padding-right: 0.5rem;
+}
+
+.rules-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
 }
 
 .close-button {
 	background-color: transparent;
 	border: 1px solid white;
 	border-radius: 3px;
-	margin: 1vw;
 	min-height: 2rem;
 	min-width: 2rem;
 	transition: ease-in-out 0.3s;
