@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {Modal} from '@mui/material';
+import Close from '../images/icon-close.svg';
 
 export default function RulesModal() {
 	const [open, setOpen] = useState(false);
@@ -17,7 +18,12 @@ export default function RulesModal() {
 				aria-labelledby='modal-modal-title'
 				aria-describedby='modal-modal-description'>
 				<div className='rules'>
-					<p>Modal Content Here</p>
+					<div>
+						<h3>RULES</h3>
+						<button className='close-button' onClick={handleClose}>
+							<img src={Close} alt='close-button' />
+						</button>
+					</div>
 				</div>
 			</Modal>
 		</section>
