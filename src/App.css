@@ -111,27 +111,36 @@
 	box-shadow: 0 0 30px white;
 }
 
-.paper {
+.paper-position {
 	bottom: 230px;
 	left: 30px;
+}
+
+.scissors-position {
+	bottom: 230px;
+	right: 30px;
+}
+
+.rock-position {
+	bottom: 80px;
+}
+
+/*** RESULT SECTION ***/
+
+.paper-color {
 	border-color: hsl(230, 89%, 65%);
 	box-shadow: 0px 5px 1px hsl(230, 89%, 55%), inset 0 5px hsl(217, 16%, 85%);
 }
 
-.scissors {
-	bottom: 230px;
-	right: 30px;
+.scissors-color {
 	border-color: hsl(40, 84%, 53%);
 	box-shadow: 0px 5px 1px hsl(39, 89%, 40%), inset 0 5px hsl(217, 16%, 85%);
 }
 
-.rock {
-	bottom: 80px;
+.rock-color {
 	border-color: hsl(349, 70%, 56%);
 	box-shadow: 0px 5px 1px hsl(349, 71%, 40%), inset 0 5px hsl(217, 16%, 85%);
 }
-
-/*** RESULT SECTION ***/
 
 /*** RULES MODAL SECTION ***/
 

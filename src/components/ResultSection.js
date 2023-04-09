@@ -1,7 +1,14 @@
-export default function ResultSection() {
+import HandGesture from './HandGesture';
+
+export default function ResultSection(props) {
 	return (
-		<section>
-			<div>result-section</div>
+		<section className='result-section-container'>
+			<div className='human-vs-computer'>
+				<div className='human-picked'>
+					<HandGesture choice={props.choice} />
+					<p className='picked-text'>YOU PICKED</p>
+				</div>
+			</div>
 		</section>
 	);
 }

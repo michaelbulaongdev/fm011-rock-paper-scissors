@@ -6,18 +6,23 @@ import ResultSection from './components/ResultSection';
 import RulesModal from './components/RulesModal';
 
 function App() {
+	const [hasPicked, setHasPicked] = useState(false);
 	const [choice, setChoice] = useState(null);
 	const [score, setScore] = useState(0);
 
 	const handleClick = (e) => {
 		setChoice(e);
+		setHasPicked(true);
 	};
 
 	return (
 		<main className='App'>
 			<ScoreSection score={score} />
-			<GameSection handleClick={handleClick} />
-			<ResultSection choice={choice} />
+			{hasPicked ? (
+				<ResultSection choice={choice} />
+			) : (
+				<GameSection handleClick={handleClick} />
+			)}
 			<RulesModal />
 		</main>
 	);
