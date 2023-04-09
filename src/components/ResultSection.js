@@ -1,7 +1,7 @@
 export default function ResultSection() {
 	return (
 		<section>
-			<div>null</div>
+			<div>result-section</div>
 		</section>
 	);
 }

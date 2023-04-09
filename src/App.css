@@ -11,7 +11,70 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	padding: 0 5vw;
 }
+
+/*** SCORE/HEADER SECTION ***/
+
+.score-section-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: transparent;
+	border: 3px solid var(--headerOutline);
+	border-radius: 10px;
+	padding: 1rem;
+	max-width: 800px;
+}
+
+.game-title-container {
+	display: flex;
+	align-items: center;
+}
+
+.game-title {
+	object-fit: contain;
+}
+
+.game-title-spacer {
+	width: 20vw;
+}
+
+.score-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: white;
+	border-radius: 5px;
+	width: 6rem;
+	height: 6rem;
+}
+
+.score-label {
+	color: var(--scoreText);
+	font-size: 1rem;
+	position: relative;
+	top: 2.5rem;
+}
+
+.score-text-container {
+	width: 5rem;
+	position: relative;
+	bottom: 1rem;
+}
+
+.score-text {
+	color: var(--darkText);
+	font-size: 3rem;
+}
+
+/*** GAME SECTION ***/
+
+/*** RESULT SECTION ***/
+
+/*** RULES MODAL SECTION ***/
 
 .rules-button {
 	font-family: 'Barlow Semi Condensed', sans-serif;
@@ -19,9 +82,10 @@
 	background-color: transparent;
 	border: 1px solid white;
 	border-radius: 5px;
-	font-size: 0.8rem;
-	padding: 0.3rem 2rem;
-	margin: 1vw;
+	padding: 0.7rem 2.3rem;
+	margin: 1rem;
+	font-size: 1rem;
+	letter-spacing: 0.2rem;
 	transition: ease-in-out 0.3s;
 }
 
@@ -29,6 +93,8 @@
 	cursor: pointer;
 	background-color: white;
 	color: var(--darkText);
+	padding: 0.7rem 5rem;
+	letter-spacing: 0.5rem;
 }
 
 .rules-container {
@@ -37,10 +103,10 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: white;
-	border-radius: 5px;
+	border-radius: 10px;
 	box-shadow: 24px;
 	color: var(--darkText);
-	padding: 0.1rem 0.5rem;
+	padding: 0.1rem 0.5rem 0.5rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -61,13 +127,18 @@
 
 .close-button {
 	background-color: transparent;
-	border: 1px solid white;
-	border-radius: 3px;
+	border: none;
 	min-height: 2rem;
 	min-width: 2rem;
+}
+
+.close-button-icon {
+	border-radius: 50%;
+	padding: 5px;
 	transition: ease-in-out 0.3s;
 }
 
-.close-button:hover {
+.close-button-icon:hover {
 	cursor: pointer;
+	box-shadow: 0px 0px 10px var(--headerOutline);
 }

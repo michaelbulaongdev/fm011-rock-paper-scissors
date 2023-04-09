@@ -23,7 +23,11 @@ export default function RulesModal() {
 						<div className='rules-header'>
 							<h2>RULES</h2>
 							<button className='close-button' onClick={handleClose}>
-								<img src={Close} alt='close-button' />
+								<img
+									className='close-button-icon'
+									src={Close}
+									alt='close-button'
+								/>
 							</button>
 						</div>
 						<div className='rules-image'>
