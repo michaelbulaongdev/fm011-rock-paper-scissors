@@ -74,6 +74,7 @@
 
 .game-section-container {
 	margin-top: 110px;
+	height: 300px;
 }
 
 .triangle-container {
@@ -126,6 +127,30 @@
 }
 
 /*** RESULT SECTION ***/
+
+.result-section-container {
+	margin-top: 60px;
+	height: 350px;
+	width: 100vw;
+}
+
+.human-vs-computer {
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.hand-picked {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 7.5rem;
+	height: 7.5rem;
+	border-radius: 50%;
+	border: 1rem solid var(--headerOutline);
+	transition: ease-in-out 0.1s;
+}
 
 .paper-color {
 	border-color: hsl(230, 89%, 65%);

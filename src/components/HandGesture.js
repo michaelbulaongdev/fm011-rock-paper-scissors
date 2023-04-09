@@ -24,7 +24,7 @@ export default function HandGesture(props) {
 			break;
 	}
 	return (
-		<div className={`hand-container ${gest}-color`}>
+		<div className={`hand-picked ${gest}-color`}>
 			<img src={gesture} alt={`${gest} hand gesture`} />
 		</div>
 	);
