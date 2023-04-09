@@ -11,7 +11,6 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	padding: 0 5vw;
 }
 
 /*** SCORE/HEADER SECTION ***/
@@ -34,6 +33,7 @@
 
 .game-title {
 	object-fit: contain;
+	width: 8rem;
 }
 
 .game-title-spacer {
@@ -71,6 +71,58 @@
 }
 
 /*** GAME SECTION ***/
+
+.game-section-container {
+	margin-top: 100px;
+}
+
+.triangle-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.triangle-image {
+	object-fit: contain;
+	width: 200px;
+}
+
+.hand-all-container {
+	display: flex;
+}
+
+.hand-container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 5.5rem;
+	height: 5.5rem;
+	border-radius: 50%;
+	border: 1rem solid var(--headerOutline);
+}
+
+.paper {
+	bottom: 230px;
+	left: 30px;
+	border-color: hsl(230, 89%, 65%);
+	box-shadow: 0px 7px 1px hsl(230, 89%, 55%);
+}
+
+.scissors {
+	bottom: 230px;
+	right: 30px;
+	border-color: hsl(40, 84%, 53%);
+	box-shadow: 0px 7px 1px hsl(39, 89%, 40%);
+}
+
+.rock {
+	bottom: 80px;
+	border-color: hsl(349, 70%, 56%);
+	box-shadow: 0px 7px 1px hsl(349, 71%, 40%);
+}
 
 /*** RESULT SECTION ***/
 
