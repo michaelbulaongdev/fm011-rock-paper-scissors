@@ -10,12 +10,12 @@ export default function ResultSection({
 	return (
 		<section className='result-section-container'>
 			<div className='human-vs-computer'>
-				<div className='human-picked'>
-					<HandGesture choice={humanPick} />
+				<div>
+					<HandGesture choice={humanPick} message={message} />
 					<p className='picked-text'>YOU PICKED</p>
 				</div>
-				<div className='computer-picked'>
-					<HandGesture choice={computerPick} />
+				<div>
+					<HandGesture choice={computerPick} message={message} />
 					<p className='picked-text'>THE HOUSE PICKED</p>
 				</div>
 			</div>

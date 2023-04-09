@@ -22,13 +22,11 @@ function App() {
 	const evaluate = () => {
 		if (humanPick === computerPick) {
 			setMessage('DRAW');
-		} else if (humanPick === 'scissors' && computerPick === 'paper') {
-			setMessage('YOU WIN');
-			setScore(score + 1);
-		} else if (humanPick === 'paper' && computerPick === 'rock') {
-			setMessage('YOU WIN');
-			setScore(score + 1);
-		} else if (humanPick === 'rock' && computerPick === 'scissors') {
+		} else if (
+			(humanPick === 'scissors' && computerPick === 'paper') ||
+			(humanPick === 'paper' && computerPick === 'rock') ||
+			(humanPick === 'rock' && computerPick === 'scissors')
+		) {
 			setMessage('YOU WIN');
 			setScore(score + 1);
 		} else {
@@ -55,8 +53,6 @@ function App() {
 	};
 
 	useEffect(() => {
-		console.log(`human picked ${humanPick}`);
-		console.log(`computer picked ${computerPick}`);
 		evaluate();
 	}, [computerPick]);
 
