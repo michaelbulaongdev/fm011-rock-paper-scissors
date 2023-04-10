@@ -72,6 +72,15 @@ function App() {
 				<GameSection handleClick={handleClick} />
 			)}
 			<RulesModal />
+			<footer className='footer-container'>
+				<a
+					className='footer'
+					href='https://github.com/michaelbulaongdev/fm011-rock-paper-scissors'
+					target='_blank'
+					rel='noreferrer'>
+					michaelbulaongdev | gh-repo
+				</a>
+			</footer>
 		</main>
 	);
 }
