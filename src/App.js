@@ -13,24 +13,26 @@ function App() {
 	const [message, setMessage] = useState('DRAW');
 	const [score, setScore] = useState(0);
 
+	//function for computer's turn to pick
 	const housePick = () => {
-		const gestList = ['paper', 'scissors', 'rock'];
+		const pickList = ['paper', 'scissors', 'rock'];
 		const rng = Math.floor(Math.random() * 3);
-		return gestList[rng];
+		return pickList[rng];
 	};
 
+	//function to evaluate who wins
 	const evaluate = () => {
 		if (humanPick === computerPick) {
-			setMessage('DRAW');
+			setMessage("IT'S A TIE!");
 		} else if (
 			(humanPick === 'scissors' && computerPick === 'paper') ||
 			(humanPick === 'paper' && computerPick === 'rock') ||
 			(humanPick === 'rock' && computerPick === 'scissors')
 		) {
-			setMessage('YOU WIN');
+			setMessage('YOU WIN!');
 			setScore(score + 1);
 		} else {
-			setMessage('YOU LOSE');
+			setMessage('THE HOUSE WINS!');
 			setScore(score - 1);
 		}
 	};
